@@ -12,33 +12,32 @@ import Frontend from "@/components/frontend";
 import Backend from "@/components/backend";
 import Image from "next/image";
 import { BsLinkedin } from "react-icons/bs";
+import Spatial from "@/components/spatial";
 
 export default function Home() {
   return (
     <>
-      <section className='grid grid-cols-2'>
-        <aside className='grid content-center'>
-          <article className='text-center'>
-            <h1 className={title()}>Starting as a</h1>
-            <br />
-            <h1 className={title({ color: "violet" })}>Geomatics Engineer</h1>
-            <h2 className={subtitle({ class: "mt-4" })}>
-              At the outset of my journey in Geomatics, I wasn’t just absorbing
-              the foundational knowledge of geospatial science, but also
-              cultivating a passion for technical solutions. From this point, my
-              journey as a software engineer commenced.
-            </h2>
-          </article>
-        </aside>
+      <section className='grid grid-cols-2 h-96'>
+        <article className='text-center w-full my-auto px-6'>
+          <h1 className={title()}>Starting as a</h1>
+          <br />
+          <h1 className={title({ color: "violet" })}>Geomatics Engineer</h1>
+          <h2 className={subtitle({ class: "mt-4" })}>
+            At the outset of my journey in Geomatics, I wasn’t just absorbing
+            the foundational knowledge of geospatial science, but also
+            cultivating a passion for technical solutions. From this point, my
+            journey as a software engineer commenced.
+          </h2>
+        </article>
         <Globe />
       </section>
 
-      <section className='grid grid-cols-2'>
+      <section className='grid grid-cols-2 h-96'>
         <Frontend />
-        <article className='text-center h-96'>
+        <article className='text-center w-full my-auto px-6'>
           <h1 className={title()}>From Data Visualization to</h1>
           <br />
-          <h1 className={title({ color: "violet" })}>Frontend Engineering</h1>
+          <h1 className={title({ color: "blue" })}>Frontend Engineering</h1>
           <h2 className={subtitle({ class: "mt-4" })}>
             Data visualization isn't confined to just maps. As I delved into
             Frontend Engineering, I realized that data could 'speak' in numerous
@@ -48,11 +47,11 @@ export default function Home() {
         </article>
       </section>
 
-      <section className='grid grid-cols-2 mb-6'>
-        <article className='inline-block max-w-lg text-center justify-center'>
+      <section className='grid grid-cols-2 h-96 mb-16'>
+        <article className='w-full text-center my-auto px-6'>
           <h1 className={title()}>From Data Engineer to</h1>
           <br />
-          <h1 className={title({ color: "violet" })}>Backend Engineering</h1>
+          <h1 className={title({ color: "cyan" })}>Backend Engineering</h1>
           <h2 className={subtitle({ class: "mt-4" })}>
             A stellar spatial solution requires a robust data foundation. From
             the backend, I built, optimized, and integrated systems to ensure
@@ -65,18 +64,11 @@ export default function Home() {
       </section>
 
       <section className='grid grid-cols-2 mb-6'>
-        <div className='relative'>
-          <Image
-            src='/land.png'
-            alt='map image'
-            fill
-            className='object-contain max-auto'
-          />
-        </div>
-        <article className='inline-block max-w-lg text-center justify-center'>
+        <Spatial />
+        <article className='w-full text-center my-auto px-6'>
           <h1 className={title()}>Finally becoming a </h1>
           <h1 className={title({ color: "yellow" })}>Spatial </h1>
-          <h1 className={title({ color: "violet" })}>Software Engineer</h1>
+          <h1 className={title({ color: "pink" })}>Software Engineer</h1>
           <h2 className={subtitle({ class: "mt-4" })}>
             With the knowledge I garnered from Geomatics to Computer Science,
             I've bridged these two worlds. I’m not just any software engineer; I
@@ -91,7 +83,7 @@ export default function Home() {
           <Link
             isExternal
             as={NextLink}
-            href={siteConfig.links.docs}
+            href={"https://wa.me/6281312223312"}
             className={buttonStyles({
               color: "primary",
               radius: "full",
@@ -104,7 +96,7 @@ export default function Home() {
             isExternal
             as={NextLink}
             className={buttonStyles({ variant: "bordered", radius: "full" })}
-            href={siteConfig.links.github}
+            href={"https://www.linkedin.com/in/jherjati/"}
           >
             <BsLinkedin className='h-4 w-4' />
             LinkedIn
