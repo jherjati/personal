@@ -12,8 +12,8 @@ export default function Globe() {
     let phi = 0;
     const globe = createGlobe(canvasRef.current as HTMLCanvasElement, {
       devicePixelRatio: 2,
-      width: 600 * 2,
-      height: 600 * 2,
+      width: 384 * 2,
+      height: 384 * 2,
       phi: 0,
       theta: 0,
       dark: 1,
@@ -42,9 +42,11 @@ export default function Globe() {
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef as LegacyRef<HTMLCanvasElement>}
-      style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: 1 }}
-    />
+    <aside className=''>
+      <canvas
+        ref={canvasRef as LegacyRef<HTMLCanvasElement>}
+        className='aspect-square h-96 w-96 max-w-full mx-auto'
+      />
+    </aside>
   );
 }

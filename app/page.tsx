@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import NextLink from "next/link";
 import { Link } from "@nextui-org/link";
 import { Snippet } from "@nextui-org/snippet";
@@ -8,6 +9,9 @@ import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import Globe from "@/components/globe";
 import Frontend from "@/components/frontend";
+import Backend from "@/components/backend";
+import Image from "next/image";
+import { BsLinkedin } from "react-icons/bs";
 
 export default function Home() {
   return (
@@ -44,8 +48,8 @@ export default function Home() {
         </article>
       </section>
 
-      <section className='grid grid-cols-2'>
-        <div className='inline-block max-w-lg text-center justify-center'>
+      <section className='grid grid-cols-2 mb-6'>
+        <article className='inline-block max-w-lg text-center justify-center'>
           <h1 className={title()}>From Data Engineer to</h1>
           <br />
           <h1 className={title({ color: "violet" })}>Backend Engineering</h1>
@@ -56,11 +60,20 @@ export default function Home() {
             crafting responsive APIs, I'm the architect behind the visuals you
             witness.
           </h2>
-        </div>
+        </article>
+        <Backend />
       </section>
 
-      <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10'>
-        <div className='inline-block max-w-lg text-center justify-center'>
+      <section className='grid grid-cols-2 mb-6'>
+        <div className='relative'>
+          <Image
+            src='/land.png'
+            alt='map image'
+            fill
+            className='object-contain max-auto'
+          />
+        </div>
+        <article className='inline-block max-w-lg text-center justify-center'>
           <h1 className={title()}>Finally becoming a </h1>
           <h1 className={title({ color: "yellow" })}>Spatial </h1>
           <h1 className={title({ color: "violet" })}>Software Engineer</h1>
@@ -70,8 +83,10 @@ export default function Home() {
             am a spatial software engineer. This unique expertise empowers me to
             offer integrated and holistic solutions for your geospatial needs.
           </h2>
-        </div>
+        </article>
+      </section>
 
+      <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10'>
         <div className='flex gap-3'>
           <Link
             isExternal
@@ -83,7 +98,7 @@ export default function Home() {
               variant: "shadow",
             })}
           >
-            Documentation
+            Contact Now
           </Link>
           <Link
             isExternal
@@ -91,18 +106,18 @@ export default function Home() {
             className={buttonStyles({ variant: "bordered", radius: "full" })}
             href={siteConfig.links.github}
           >
-            <GithubIcon size={20} />
-            GitHub
+            <BsLinkedin className='h-4 w-4' />
+            LinkedIn
           </Link>
         </div>
 
-        <div className='mt-8'>
+        {/* <div className='mt-8'>
           <Snippet hideSymbol hideCopyButton variant='flat'>
             <span>
               Get started by editing <Code color='primary'>app/page.tsx</Code>
             </span>
           </Snippet>
-        </div>
+        </div> */}
       </section>
     </>
   );
