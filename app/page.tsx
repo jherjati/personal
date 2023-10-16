@@ -13,11 +13,13 @@ import Backend from "@/components/backend";
 import Image from "next/image";
 import { BsLinkedin } from "react-icons/bs";
 import Spatial from "@/components/spatial";
+import Stars from "@/components/stars";
 
 export default function Home() {
   return (
     <>
-      <section className='grid grid-cols-2 h-96'>
+      <section className='grid grid-cols-2 h-96 relative overflow-hidden'>
+        <Stars />
         <article className='text-center w-full my-auto px-6'>
           <h1 className={title()}>Starting as a</h1>
           <br />

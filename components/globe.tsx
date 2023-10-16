@@ -3,8 +3,6 @@
 import createGlobe from "cobe";
 import { LegacyRef, useEffect, useRef } from "react";
 
-// https://github.com/shuding/cobe
-
 export default function Globe() {
   const canvasRef = useRef<HTMLCanvasElement>();
 
@@ -25,12 +23,12 @@ export default function Globe() {
       glowColor: [1, 1, 1],
       markers: [
         // longitude latitude
-        { location: [37.7595, -122.4367], size: 0.03 },
-        { location: [40.7128, -74.006], size: 0.1 },
+        { location: [-6.1944, 106.8229], size: 0.1 }, // Jakarta
+        { location: [35.6764, 139.65], size: 0.05 }, // Tokyo
+        { location: [24.5247, 39.5692], size: 0.05 }, // Madinah
+        { location: [37.7749, -122.4194], size: 0.05 }, // San Fransisco
       ],
       onRender: (state) => {
-        // Called on every animation frame.
-        // `state` will be an empty object, return updated params.
         state.phi = phi;
         phi += 0.01;
       },
@@ -42,7 +40,7 @@ export default function Globe() {
   }, []);
 
   return (
-    <aside className=''>
+    <aside style={{ zIndex: 1 }}>
       <canvas
         ref={canvasRef as LegacyRef<HTMLCanvasElement>}
         className='aspect-square h-96 w-96 max-w-full mx-auto'
