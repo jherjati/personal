@@ -20,10 +20,10 @@ export default function Zoey() {
           />
           <div className='flex flex-col gap-1 items-start justify-center'>
             <h4 className='text-small font-semibold leading-none text-default-600'>
-              Zoey Lang
+              Jatmiko Herjati
             </h4>
             <h5 className='text-small tracking-tight text-default-400'>
-              @zoeylang
+              @mikoding9
             </h5>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function Zoey() {
           adventure!
         </p>
         <span className='pt-2'>
-          #FrontendWithZoey
+          #FrontendWithMiko
           <span className='py-2' aria-label='computer' role='img'>
             💻
           </span>

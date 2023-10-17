@@ -7,6 +7,7 @@ export default function Blurred() {
   return (
     <Card isFooterBlurred radius='lg' className='border-none'>
       <Image
+        isZoomed
         alt='Woman listing to music'
         className='object-cover'
         height={200}

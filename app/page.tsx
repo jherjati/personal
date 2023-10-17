@@ -1,12 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import NextLink from "next/link";
 import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 import Globe from "@/components/globe";
 import Frontend from "@/components/frontend";
 import Backend from "@/components/backend";
@@ -14,6 +10,7 @@ import Image from "next/image";
 import { BsLinkedin } from "react-icons/bs";
 import Spatial from "@/components/spatial";
 import Stars from "@/components/stars";
+import waveImage from "@/components/frontend/wave.webp";
 
 export default function Home() {
   return (
@@ -34,9 +31,12 @@ export default function Home() {
         <Globe />
       </section>
 
-      <section className='grid grid-cols-2 h-96'>
+      <section className='grid grid-cols-2 h-96 relative'>
+        <div className='w-full h-full absolute top-0 right-0 z-0 opacity-40 rounded-md'>
+          <Image alt='wave background image' fill src={waveImage}></Image>
+        </div>
         <Frontend />
-        <article className='text-center w-full my-auto px-6'>
+        <article className='text-center w-full my-auto px-6 z-10'>
           <h1 className={title()}>From Data Visualization to</h1>
           <br />
           <h1 className={title({ color: "blue" })}>Frontend Engineering</h1>
