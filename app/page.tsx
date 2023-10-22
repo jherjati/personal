@@ -15,7 +15,7 @@ import waveImage from "@/components/frontend/wave.webp";
 export default function Home() {
   return (
     <>
-      <section className='grid grid-cols-2 h-96 relative overflow-hidden'>
+      <section className='grid grid-cols-1 md:grid-cols-2 min-h-[24rem] relative overflow-hidden'>
         <Stars />
         <article className='text-center w-full my-auto px-6'>
           <h1 className={title()}>Starting as a</h1>
@@ -31,7 +31,7 @@ export default function Home() {
         <Globe />
       </section>
 
-      <section className='grid grid-cols-2 h-96 relative'>
+      <section className='grid grid-cols-1 md:grid-cols-2 min-h-[24rem] relative'>
         <div className='w-full h-full absolute top-0 right-0 z-0 opacity-40 rounded-md'>
           <Image alt='wave background image' fill src={waveImage}></Image>
         </div>
