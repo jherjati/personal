@@ -115,7 +115,7 @@ const Backend = () => {
 
   return (
     <ReactFlow
-      className='rounded-lg'
+      className='md:rounded-l-lg md:rounded-r-none min-h-[24rem]'
       nodes={nodes}
       edges={edges}
       onNodesChange={onNodesChange}

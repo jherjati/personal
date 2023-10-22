@@ -80,11 +80,11 @@ const Spatial: React.FunctionComponent<SpatialProps> = () => {
   }, []);
 
   return (
-    <aside className='relative'>
+    <aside className='relative row-start-2 md:row-start-1'>
       <div
         id='map'
         style={{ height: "50vh" }}
-        className='w-full relative rounded-lg overflow-hidden'
+        className='w-full relative md:rounded-r-lg  md:rounded-l-none overflow-hidden'
       ></div>
     </aside>
   );

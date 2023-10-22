@@ -49,7 +49,7 @@ export default function Home() {
         </article>
       </section>
 
-      {/* <section className='grid grid-cols-2 h-96 mb-16'>
+      <section className='grid grid-cols-1 md:grid-cols-2 min-h-[24rem] mb-16 gap-6 md:gap-0'>
         <article className='w-full text-center my-auto px-6'>
           <h1 className={title()}>From Data Engineer to</h1>
           <br />
@@ -65,7 +65,7 @@ export default function Home() {
         <Backend />
       </section>
 
-      <section className='grid grid-cols-2 mb-6'>
+      <section className='grid grid-cols-1 md:grid-cols-2 mb-6 min-h-[24rem] gap-6 md:gap-0'>
         <Spatial />
         <article className='w-full text-center my-auto px-6'>
           <h1 className={title()}>Finally becoming a </h1>
@@ -78,7 +78,7 @@ export default function Home() {
             offer integrated and holistic solutions for your geospatial needs.
           </h2>
         </article>
-      </section> */}
+      </section>
 
       <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10'>
         <div className='flex gap-3'>
