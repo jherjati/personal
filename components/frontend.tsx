@@ -6,20 +6,20 @@ import MyTabs from "./frontend/myTabs";
 
 interface IFrontendProps {}
 
-const Frontend: React.FunctionComponent<IFrontendProps> = (props) => {
+const Frontend: React.FunctionComponent<IFrontendProps> = () => {
   return (
     <aside className='relative'>
-      <div className='absolute left-6 bottom-24 animate-[levitate_15s_ease_infinite] '>
+      <div className='absolute left-[3%] top-[2%] animate-[levitate_10s_ease_infinite]'>
+        <Zoey />
+      </div>
+      <div className='absolute left-[5%] bottom-[20%] animate-[levitate_20s_ease_infinite] '>
         <MyTable />
       </div>
-      <div className='absolute right-6 bottom-20 animate-[levitate_13s_ease_infinite_1s_reverse]'>
-        <Blurred />
-      </div>
-      <div className='absolute right-0 top-16 animate-[levitate_10s_ease_infinite_1s_reverse]'>
+      <div className='absolute right-[5%] top-[15%] animate-[levitate_15s_ease_infinite_1s_reverse]'>
         <MyTabs />
       </div>
-      <div className='absolute left-0 animate-[levitate_10s_ease_infinite] top-6'>
-        <Zoey />
+      <div className='absolute right-[10%] bottom-[20%] animate-[levitate_25s_ease_infinite_1s_reverse]'>
+        <Blurred />
       </div>
     </aside>
   );
