@@ -2,7 +2,8 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Mikoding",
-  description: "Make beautiful websites regardless of your design experience.",
+  description:
+    "Get to know Jatmiko Herjati, spatial software engineer. Bachelor in geomatics engineering. Master in software engineering.",
   navItems: [
     {
       label: "Home",

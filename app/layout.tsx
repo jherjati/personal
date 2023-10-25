@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/no-text-mikoding.png",
+    shortcut: "/no-text-mikoding.png",
+    apple: "/no-text-mikoding.png",
   },
 };
 
@@ -41,9 +41,7 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className='relative flex flex-col h-screen'>
             {/* <Navbar /> */}
-            <main className='w-full pt-10 flex-grow'>
-              {children}
-            </main>
+            <main className='w-full pt-10 flex-grow'>{children}</main>
             {/* <footer className='w-full flex items-center justify-center py-3'>
               <Link
                 isExternal
