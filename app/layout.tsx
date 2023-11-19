@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: {
@@ -42,6 +43,7 @@ export default function RootLayout({
           <div className='relative flex flex-col h-screen'>
             {/* <Navbar /> */}
             <main className='w-full pt-10 flex-grow'>{children}</main>
+            <Analytics />
             {/* <footer className='w-full flex items-center justify-center py-3'>
               <Link
                 isExternal
